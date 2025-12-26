@@ -1,0 +1,48 @@
+@if (!loading && dashboardData) {
+
+  <div class="dashboard-container">
+
+    <!-- LEFT PANEL -->
+    <div class="left-panel">
+      <h2>Welcome, {{ dashboardData.username }}</h2>
+
+      <div class="membership-card">
+        <p><strong>Membership:</strong> {{ dashboardData.membershipName }}</p>
+        <p><strong>Join Date:</strong> {{ dashboardData.joinDate }}</p>
+
+        <p>
+          <strong>End Date:</strong>
+          <span class="end-date">{{ dashboardData.nextDueDate }}</span>
+        </p>
+
+        <p class="status">{{ dashboardData.status }}</p>
+        <p><strong>Last Payment:</strong> ₹{{ dashboardData.lastPaymentAmount }}</p>
+      </div>
+
+      <div class="diet-card">
+        <h3>Diet Plan</h3>
+        <p>{{ dashboardData.dietDescription }}</p>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right-panel">
+      <button>Diet Plan</button>
+      <button>Gym Schedule</button>
+      <button>Trainer Availability</button>
+      <button>Supplements</button>
+      <button>Membership & Fees</button>
+      <button>Notifications</button>
+
+      <button class="logout" (click)="logout()">Logout</button>
+    </div>
+
+  </div>
+
+} @else {
+
+  <div class="loading">
+    Loading dashboard...
+  </div>
+
+}

@@ -1,0 +1,21 @@
+<div class="login-page">
+  <div class="login-card">
+    <h1>Gym Management System</h1>
+
+    <form [formGroup]="form" (ngSubmit)="onLogin()">
+      <input
+        type="text"
+        formControlName="username"
+        placeholder="Username"
+      />
+
+      <input
+        type="password"
+        formControlName="password"
+        placeholder="Password"
+      />
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>

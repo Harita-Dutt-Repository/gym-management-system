@@ -1,0 +1,71 @@
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    background: url('/dashboard.jpeg') no-repeat center center;
+    background-size: contain;
+    padding: 120px;
+  }
+  
+  /* LEFT PANEL */
+  .left-panel {
+    flex: 2;
+    color: #000;
+  }
+  
+  .membership-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+  }
+  
+  .end-date {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .status.active {
+    color: green;
+    font-weight: bold;
+  }
+  
+  /* RIGHT PANEL */
+  .right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+  }
+  
+  button {
+    width: 220px;
+    padding: 10px;
+    border: none;
+    background: #1976d2;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button.logout {
+    background: #d32f2f;
+    margin-top: auto;
+  }
+  
+  /* MOBILE RESPONSIVE */
+  @media (max-width: 768px) {
+    .dashboard-container {
+      flex-direction: column;
+      background-position: top;
+    }
+  
+    .right-panel {
+      align-items: center;
+    }
+  
+    .membership-card {
+      width: 100%;
+    }
+  }
+  
